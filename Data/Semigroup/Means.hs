@@ -1,4 +1,23 @@
-module Data.Semigroup.Means where
+module Data.Semigroup.Means (
+    -- * Arithmetic mean
+      AM , amWeight , amSum , am , am' , getAM
+
+    -- * Geometric mean
+    , GM , gmWeight , gmProduct , gm , getGM
+
+    -- * Harmonic mean
+    , HM , hmWeight , hmSum , hm , getHM
+
+    -- * Quadratic mean
+    , QM , qmWeight , qmSum , qm , getQM
+
+    -- * Cubic mean
+    , CM , cmWeight , cmSum , cm , getCM
+
+    -- * Midrange mean
+    , MM , mmMin , mmMax , mm , getMM
+
+    ) where
 
 import Data.Semigroup
 
