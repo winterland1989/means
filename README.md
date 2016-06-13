@@ -1,6 +1,9 @@
 means
 =====
 
+[![Hackage](https://img.shields.io/hackage/v/means.svg?style=flat)](http://hackage.haskell.org/package/means)
+[![Travis-CI](https://travis-ci.org/winterland1989/means.svg)](https://travis-ci.org/winterland1989/means)
+
 This package provide following mean calculations using semigroup:
 
 + Arithmetic/ Weighted Arithmetic mean:
@@ -27,6 +30,8 @@ This package provide following mean calculations using semigroup:
 
 ![MM](https://en.wikipedia.org/api/rest_v1/media/math/render/svg/b554f5873aca205738f447d576c43e934dbaab62)
 
+Check [wikipedia](https://en.wikipedia.org/wiki/Average) for details.
+
 Example
 -------
 
@@ -37,4 +42,9 @@ Example
 30.000000000000007
 *Data.Semigroup.Means> getHM . foldr1 (<>) . map hm $ [4, 36, 45, 50, 75]
 15.0
+*Data.Semigroup.Means> :m + Data.Ratio
+*Data.Semigroup.Means Data.Ratio> getMM . foldr1 (<>) . map mm $ [4, 36, 45, 50, 75] :: Ratio Int
+79 % 2
+*Data.Semigroup.Means Data.Ratio> getAM . foldr1 (<>) . map am $ [4, 36, 45, 50, 75] :: Ratio Int
+42 % 1
 ```
